@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Rice">
+        <item name="fontFamily">@font/spicy_rice</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/red_brown</item>
+        <item name="textAllCaps">true</item>
+    </style>
+</resources>

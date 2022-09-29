@@ -8,15 +8,16 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable\"
+        android:layout_height="match_parent"
         android:scrollbars="vertical"
+        android:background="@drawable/back_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <RelativeLayout
+            android:id="@+id/layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
@@ -28,82 +29,147 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="@string/create"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:text="@string/create" />
 
             <ImageButton
                 android:id="@+id/sand"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/create"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/sandy"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/create" />
+                android:layout_alignStart="@id/create"
+                android:background="@drawable/sandy" />
 
             <ImageButton
                 android:id="@+id/blue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bluepy"
-                app:layout_constraintBottom_toBottomOf="@+id/sand"
-                app:layout_constraintEnd_toStartOf="@+id/green"
-                app:layout_constraintStart_toEndOf="@id/sand"
-                app:layout_constraintTop_toTopOf="@+id/sand" />
+                android:layout_below="@+id/create"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bluepy" />
 
             <ImageView
                 android:id="@+id/green"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/greeny"
-                app:layout_constraintBottom_toBottomOf="@+id/blue"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/blue" />
-
-            <ImageButton
-                android:id="@+id/sand2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_below="@+id/create"
+                android:layout_alignEnd="@id/create"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/sandy"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/sand"
-                app:layout_constraintStart_toStartOf="@+id/sand"
-                app:layout_constraintTop_toBottomOf="@+id/sand" />
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/greeny" />
 
-            <ImageButton
-                android:id="@+id/blue2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bluepy"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/blue"
-                app:layout_constraintStart_toStartOf="@+id/blue" />
+<!--            <ImageButton-->
+<!--                android:id="@+id/sand2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:background="@drawable/sandy"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/sand"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/sand"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/sand" />-->
 
-            <ImageView
-                android:id="@+id/green2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/greeny"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/green"
-                app:layout_constraintStart_toStartOf="@+id/green" />
+<!--            <ImageButton-->
+<!--                android:id="@+id/blue2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/bluepy"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/blue"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/blue" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/green2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/greeny"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/green"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/green" />-->
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/delete"
+                style="@style/Bottom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_below="@+id/sand"
+                android:layout_alignTop="@id/devidor1"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
                 android:text="@string/del"
                 app:icon="@drawable/ic_delete"
-                app:layout_constraintTop_toBottomOf="@+id/blue2"
-                tools:ignore="MissingConstraints" />
+                android:layout_alignStart="@+id/infekcia"
+                android:layout_alignEnd="@+id/infekcia"
+                android:layout_centerHorizontal="true"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/infekcia"
+                style="@style/Bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/delete"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:text="@string/infec"
+                app:icon="@drawable/ic_delete" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/heal"
+                style="@style/Bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/infekcia"
+                android:layout_alignStart="@+id/infekcia"
+                android:layout_alignEnd="@+id/infekcia"
+                android:layout_centerHorizontal="true"
+                android:background="@color/transparent"
+                android:text="@string/heal"
+                app:icon="@drawable/ic_delete" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/devidor1"
+                android:background="@color/dark_brown"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/blue"
+                android:layout_alignEnd="@id/create"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toStartOf="@id/create" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/devidor2"
+                android:background="@color/dark_brown"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@id/heal"
+                android:layout_alignEnd="@id/create"
+                android:layout_marginStart="20dp"
+                android:layout_toStartOf="@id/create" />
+
+            <TextView
+                style="@style/Rice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/devidor2"
+                android:layout_marginTop="16dp"
+                android:layout_centerInParent="true"
+                android:text="@string/stat" />
+
+<!--            <View-->
+<!--                android:id="@+id/view"-->
+<!--                android:layout_width="10dp"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                />-->
 
 
             // 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
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

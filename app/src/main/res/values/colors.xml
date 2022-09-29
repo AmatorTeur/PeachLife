@@ -13,4 +13,6 @@
     <color name="brown">#7E685E</color>
     <color name="dark_brown">#706661</color>
     <color name="red_brown">#592A20</color>
+    <color name="transparent">#00000000</color>
+    <color name="tusklyak">#66319cc0</color>
 </resources>

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PeachLife</string>
+    <string name="del">Delete</string>
+    <string name="infec">Infection</string>
+    <string name="save">Save all</string>
+    <string name="create">Create a Cell</string>
 </resources>

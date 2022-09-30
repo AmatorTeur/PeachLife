@@ -13,7 +13,13 @@ class SquareLenin @JvmOverloads constructor(
     private val paint =Paint().apply {
         isAntiAlias = true
         color = Color.BLACK
-        style
+        style = Paint.Style.STROKE
+        strokeWidth = 10f
+    }
+
+    override fun onDraw(canvas: Canvas?) {
+        super.onDraw(canvas)
+
     }
     }
 //https://www.youtube.com/watch?v=2fGI0TQkRY4&ab_channel=AndroidBroadcast.ВсеобАндроидразработке

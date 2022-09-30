@@ -1,9 +1,13 @@
 <resources>
     <string name="app_name">PeachLife</string>
+    <string name="Welcome">Welcome To Peach Life</string>
     <string name="del">Delete</string>
     <string name="infec">Infection</string>
     <string name="save">Save all</string>
     <string name="create">Create a Cell</string>
     <string name="stat">Statistics</string>
     <string name="heal">Heal</string>
+    <string name="count">Cell count</string>
+    <string name="infectious"> Infectious\n cells</string>
+    <string name="dead">Dead cells</string>
 </resources>

@@ -6,7 +6,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/water">
 
+    <com.example.peachlife.SquareLenin
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/scroll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/transparent"/>
+
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
@@ -37,9 +47,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/create"
                 android:layout_alignStart="@id/create"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/sandy" />
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="5dp"
+                android:src="@drawable/sandy" />
 
             <ImageButton
                 android:id="@+id/blue"
@@ -47,20 +59,24 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/create"
                 android:layout_centerInParent="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/bluepy" />
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="5dp"
+                android:src="@drawable/bluepy" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/green"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/create"
                 android:layout_alignEnd="@id/create"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/greeny" />
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="5dp"
+                android:src="@drawable/greeny" />
 
 <!--            <ImageButton-->
 <!--                android:id="@+id/sand2"-->
@@ -97,14 +113,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/sand"
-                android:layout_alignTop="@id/devidor1"
-                android:layout_centerInParent="true"
-                android:background="@color/transparent"
-                android:text="@string/del"
-                app:icon="@drawable/ic_delete"
                 android:layout_alignStart="@+id/infekcia"
+                android:layout_alignTop="@id/devidor1"
                 android:layout_alignEnd="@+id/infekcia"
-                android:layout_centerHorizontal="true"/>
+                android:layout_centerInParent="true"
+                android:background="?android:selectableItemBackground"
+                android:text="@string/del"
+                app:icon="@drawable/ic_delete" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/infekcia"
@@ -113,7 +128,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/delete"
                 android:layout_centerInParent="true"
-                android:background="@color/transparent"
+                android:background="?android:selectableItemBackground"
                 android:text="@string/infec"
                 app:icon="@drawable/ic_delete" />
 
@@ -126,20 +141,20 @@
                 android:layout_alignStart="@+id/infekcia"
                 android:layout_alignEnd="@+id/infekcia"
                 android:layout_centerHorizontal="true"
-                android:background="@color/transparent"
+                android:background="?android:selectableItemBackground"
                 android:text="@string/heal"
                 app:icon="@drawable/ic_delete" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/devidor1"
-                android:background="@color/dark_brown"
                 android:layout_width="wrap_content"
                 android:layout_height="1dp"
                 android:layout_below="@+id/blue"
                 android:layout_alignEnd="@id/create"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_toStartOf="@id/create" />
+                android:layout_marginTop="15dp"
+                android:layout_toStartOf="@id/create"
+                android:background="@color/dark_brown" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/devidor2"
@@ -152,15 +167,46 @@
                 android:layout_toStartOf="@id/create" />
 
             <TextView
+                android:id="@+id/statistic"
                 style="@style/Rice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/devidor2"
-                android:layout_marginTop="16dp"
                 android:layout_centerInParent="true"
+                android:layout_marginTop="16dp"
                 android:text="@string/stat" />
 
-<!--            <View-->
+            <TextView
+                android:id="@+id/statCount"
+                style="@style/Statistic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statistic"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/count" />
+
+            <TextView
+                android:id="@+id/statInf"
+                style="@style/Statistic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statCount"
+                android:layout_alignStart="@+id/statCount"
+                android:layout_marginTop="16dp"
+                android:text="@string/infectious" />
+
+            <TextView
+                android:id="@+id/statDead"
+                style="@style/Statistic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statInf"
+                android:layout_alignStart="@+id/statInf"
+                android:layout_marginTop="16dp"
+                android:text="@string/dead" />
+
+            <!--            <View-->
 <!--                android:id="@+id/view"-->
 <!--                android:layout_width="10dp"-->
 <!--                android:layout_height="1dp"-->

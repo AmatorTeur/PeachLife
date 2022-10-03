@@ -111,7 +111,7 @@
                 android:layout_centerInParent="true"
                 android:background="?android:selectableItemBackground"
                 android:text="@string/del"
-                app:icon="@drawable/ic_delete" />
+                app:icon="@drawable/delete" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/infekcia"

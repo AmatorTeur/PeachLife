@@ -20,6 +20,9 @@ class SquareLenin @JvmOverloads constructor(
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
 
+        canvas?.apply {
+            drawARGB(x,y,10,10)
+        }
     }
     }
 //https://www.youtube.com/watch?v=2fGI0TQkRY4&ab_channel=AndroidBroadcast.ВсеобАндроидразработке

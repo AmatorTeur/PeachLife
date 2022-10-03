@@ -10,20 +10,23 @@ import android.view.View
 class SquareLenin @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
-    private val paint =Paint().apply {
-        isAntiAlias = true
+    private val paint = Paint ().apply {
+        strokeWidth = 2f
         color = Color.BLACK
-        style = Paint.Style.STROKE
-        strokeWidth = 10f
+        style =Paint.Style.STROKE
     }
-
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
 
-        canvas?.apply {
-            drawARGB(x,y,10,10)
-        }
+        val sizeCanvas = height
+        paint.color = resources.getColor(R.color.transparent)
+        canvas!!.drawRect(0f, 0f, sizeCanvas.toFloat(), sizeCanvas.toFloat(), paint)
+
+
+
+
     }
+
     }
 //https://www.youtube.com/watch?v=2fGI0TQkRY4&ab_channel=AndroidBroadcast.ВсеобАндроидразработке
 //https://developer.android.com/codelabs/advanced-android-kotlin-training-custom-views#3

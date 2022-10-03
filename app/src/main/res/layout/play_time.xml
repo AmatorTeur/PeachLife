@@ -6,14 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/water">
 
-    <com.example.peachlife.SquareLenin
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/scroll"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/transparent"/>
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scroll"
@@ -143,7 +135,7 @@
                 android:layout_centerHorizontal="true"
                 android:background="?android:selectableItemBackground"
                 android:text="@string/heal"
-                app:icon="@drawable/ic_delete" />
+                app:icon="" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/devidor1"
@@ -215,7 +207,19 @@
 <!--                />-->
 
 
-            // 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
+
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
+
+    <com.example.peachlife.SquareLenin
+        android:id="@+id/squareLenin"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@id/scroll"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    // 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-->

@@ -10,4 +10,9 @@
     <string name="count">Cell count</string>
     <string name="infectious"> Infectious\n cells</string>
     <string name="dead">Dead cells</string>
+    <string name="exit">Exit</string>
+
+
+    <string name="start">Start</string>
+    <string name="options">Options</string>
 </resources>

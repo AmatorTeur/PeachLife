@@ -1,11 +1,11 @@
 package com.example.peachlife
 
+import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.Paint
+import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
+
 
 class SquareLenin @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
@@ -15,23 +15,46 @@ class SquareLenin @JvmOverloads constructor(
         color = Color.BLACK
         style =Paint.Style.STROKE
     }
+    @SuppressLint("DrawAllocation")
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
         val sizeCanvas = height
-        paint.strokeWidth = 10f
+        paint.strokeWidth = 6f
         paint.color = resources.getColor(R.color.red_brown)
+        paint.pathEffect = CornerPathEffect(50f)
+        paint.style = Paint.Style.STROKE
         canvas.drawRect(0f, 0f, sizeCanvas.toFloat(), sizeCanvas.toFloat(), paint)
 
 
-        paint.color = Color.BLACK;
-        paint.strokeWidth = 3f;
-        canvas.drawRect(30f, 30f, 24f, 24f, paint);
-        paint.strokeWidth = 0f;
-        paint.color = Color.CYAN;
-        canvas.drawRect(33f, 60f, 24f, 24f, paint );
-        paint.color = Color.YELLOW;
-        canvas.drawRect(33f, 33f, 104f, 204f, paint );
+        paint.style = Paint.Style.FILL
+        paint.strokeWidth = 0f
+
+        paint.color = resources.getColor(R.color.sand)
+        paint.pathEffect = CornerPathEffect(15f)
+        canvas.drawRect(264f, 104f, 334f, 174f, paint)
+
+        paint.color = resources.getColor(R.color.blue)
+        paint.pathEffect = CornerPathEffect(15f)
+        canvas.drawRect(184f, 104f, 254f, 174f, paint )
+
+        paint.color = resources.getColor(R.color.green)
+        paint.pathEffect = CornerPathEffect(15f)
+        canvas.drawRect(104f, 104f, 174f, 174f, paint )
+
+
+
+        paint.color = resources.getColor(R.color.sand)
+        paint.pathEffect = CornerPathEffect(15f)
+        canvas.drawRect(250f, 160f, 320f, 230f, paint)
+
+        paint.color = resources.getColor(R.color.blue)
+        paint.pathEffect = CornerPathEffect(15f)
+        canvas.drawRect(170f, 160f, 240f, 230f, paint )
+
+        paint.color = resources.getColor(R.color.green)
+        paint.pathEffect = CornerPathEffect(15f)
+        canvas.drawRect(90f, 160f, 160f, 230f, paint )
 
 
 

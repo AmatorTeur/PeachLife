@@ -11,16 +11,27 @@ class SquareLenin @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
     private val paint = Paint ().apply {
-        strokeWidth = 2f
+        strokeWidth = 10f
         color = Color.BLACK
         style =Paint.Style.STROKE
     }
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
         val sizeCanvas = height
-        paint.color = resources.getColor(R.color.transparent)
-        canvas!!.drawRect(0f, 0f, sizeCanvas.toFloat(), sizeCanvas.toFloat(), paint)
+        paint.strokeWidth = 10f
+        paint.color = resources.getColor(R.color.red_brown)
+        canvas.drawRect(0f, 0f, sizeCanvas.toFloat(), sizeCanvas.toFloat(), paint)
+
+
+        paint.color = Color.BLACK;
+        paint.strokeWidth = 3f;
+        canvas.drawRect(30f, 30f, 24f, 24f, paint);
+        paint.strokeWidth = 0f;
+        paint.color = Color.CYAN;
+        canvas.drawRect(33f, 60f, 24f, 24f, paint );
+        paint.color = Color.YELLOW;
+        canvas.drawRect(33f, 33f, 104f, 204f, paint );
 
 
 

@@ -1,12 +1,12 @@
-package com.example.peachlife
+package com.example.peachlife.main
 
 import android.annotation.SuppressLint
-import android.app.ActionBar
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import com.example.peachlife.R
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("InlinedApi")

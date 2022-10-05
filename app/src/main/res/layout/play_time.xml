@@ -246,7 +246,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintEnd_toStartOf="@id/scroll"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 <!--    // 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-->

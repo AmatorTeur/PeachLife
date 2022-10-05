@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".main.MainActivity"
     android:background="@drawable/beach">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -14,8 +14,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.502">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/Welcome"
@@ -28,37 +27,36 @@
             app:layout_constraintBottom_toTopOf="@+id/button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button"
             style="@style/Bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:background="@drawable/main_botton"
-            android:text="@string/start"
-            android:layout_gravity="center_horizontal" />
+            android:text="@string/start" />
 
         <Button
             android:id="@+id/option"
             style="@style/Bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp"
             android:background="@drawable/main_botton"
-            android:text="@string/options"
-            android:layout_gravity="center_horizontal"/>
+            android:text="@string/options" />
 
         <Button
             android:id="@+id/exit"
             style="@style/Bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp"
             android:background="@drawable/main_botton"
-            android:text="@string/exit"
-            android:layout_gravity="center_horizontal"/>
+            android:text="@string/exit" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 

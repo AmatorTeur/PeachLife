@@ -10,16 +10,14 @@ import android.view.View
 class SquareLenin @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
-    private val paint = Paint ().apply {
-        strokeWidth = 10f
-        color = Color.BLACK
-        style =Paint.Style.STROKE
-    }
+    private val paint = Paint()
     @SuppressLint("DrawAllocation")
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
+
         val sizeCanvas = height
+        val squareSize = sizeCanvas / 10
         paint.strokeWidth = 6f
         paint.color = resources.getColor(R.color.red_brown)
         paint.pathEffect = CornerPathEffect(50f)
@@ -59,7 +57,14 @@ class SquareLenin @JvmOverloads constructor(
 
 
 
+
     }
+
+//    fun add(x: Int,y: Int,color: Int) {
+//        list.add(x, y, color)
+//        invalidate()
+//    }
+
 
     }
 //https://www.youtube.com/watch?v=2fGI0TQkRY4&ab_channel=AndroidBroadcast.ВсеобАндроидразработке

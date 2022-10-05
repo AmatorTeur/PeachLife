@@ -1,4 +1,6 @@
 package com.example.peachlife.play
 
-interface PlayTimeView {
+import com.example.peachlife.base.BaseView
+
+interface PlayTimeView: BaseView {
 }

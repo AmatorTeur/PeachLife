@@ -18,7 +18,7 @@
 
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/playexit"
             style="@style/Bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -137,7 +137,7 @@
                 android:layout_centerInParent="true"
                 android:background="?android:selectableItemBackground"
                 android:text="@string/del"
-                app:icon="@drawable/delete"/>
+                app:icon="@drawable/delete" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/infekcia"
@@ -148,7 +148,7 @@
                 android:layout_centerInParent="true"
                 android:background="?android:selectableItemBackground"
                 android:text="@string/infec"
-                app:icon="@drawable/infection"/>
+                app:icon="@drawable/infection" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/heal"
@@ -224,6 +224,14 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:text="@string/dead" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statistic"
+
+                android:layout_marginTop="16dp"
+                />
 
             <!--            <View-->
 <!--                android:id="@+id/view"-->

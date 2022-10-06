@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -44,6 +45,8 @@ dependencies {
     implementation 'com.github.Omega-R:OmegaExtensions:1.0.5'
     implementation 'com.github.Omega-R:OmegaLaunchers:1.0.3'
     implementation 'com.github.Omega-R:OmegaBase:1.4.3'
-    implementation 'com.github.Omega-R:OmegaBind:1.0.0'
+    implementation 'com.github.Omega-R:OmegaBind:1.0.4'
     implementation 'com.github.Omega-R.OmegaMoxy:moxy-androidx:62e5a9f'
+    kapt 'com.github.Omega-R.OmegaMoxy:moxy-compiler:62e5a9f'
+
 }

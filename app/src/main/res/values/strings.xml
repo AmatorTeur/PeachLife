@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PeachLife</string>
+    <string name="app_name" translatable="false">PeachLife</string>
     <string name="del">Delete</string>
     <string name="infec">Infection</string>
     <string name="save">Save all</string>
@@ -12,13 +12,14 @@
     <string name="exit">Exit</string>
 
 
-    <string name="Welcome">Welcome To Peach Life</string>
+    <string name="Welcome" translatable="false">Welcome To Peach Life</string>
     <string name="start">Start</string>
     <string name="options">Options</string>
 
-    <string name="size1">10 x 10</string>
-    <string name="size2">30 x 30</string>
-    <string name="size3">50 x 50</string>
+    <string name="size1" translatable="false">10 x 10</string>
+    <string name="size2" translatable="false">30 x 30</string>
+    <string name="size3" translatable="false">50 x 50</string>
     <string name="back">Back</string>
     <string name="next">Next</string>
+    <string name="contin">Continue</string>
 </resources>

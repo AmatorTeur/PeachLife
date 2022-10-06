@@ -19,13 +19,23 @@
             android:screenOrientation="landscape"
             android:configChanges="orientation"
             tools:ignore="LockedOrientationActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+        android:name=".size.SizeActivity"
+        android:screenOrientation="landscape">
+        </activity>
+
+        <activity
+            android:name=".play.PlayTimeActivity"
+            android:screenOrientation="landscape">
+        </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

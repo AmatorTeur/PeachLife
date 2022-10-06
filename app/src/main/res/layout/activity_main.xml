@@ -30,13 +30,24 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/start"
             style="@style/Bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/main_botton"
+            android:foreground="?selectableItemBackground"
             android:text="@string/start" />
+
+        <Button
+            android:id="@+id/contin"
+            style="@style/Bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/main_botton"
+            android:text="@string/contin" />
 
         <Button
             android:id="@+id/option"

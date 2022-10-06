@@ -84,7 +84,6 @@
             android:layout_below="@+id/button_size3"
             android:layout_alignEnd="@+id/button_size3"
             android:layout_gravity="center_horizontal"
-            android:layout_marginEnd="275dp"
             android:background="@drawable/main_botton"
             android:padding="10dp"
             android:text="@string/next" />

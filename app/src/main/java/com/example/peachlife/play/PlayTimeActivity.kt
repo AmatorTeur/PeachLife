@@ -9,6 +9,7 @@ import com.example.peachlife.SquareLenin
 import com.example.peachlife.base.BaseActivity
 import com.example.peachlife.main.MainPresenter
 import com.example.peachlife.main.MainView
+import com.google.android.material.button.MaterialButton
 import com.omegar.libs.omegalaunchers.createActivityLauncher
 import com.omegar.mvp.ktx.providePresenter
 
@@ -23,6 +24,8 @@ class PlayTimeActivity :BaseActivity (R.layout.play_time), PlayTimeView {
     private val buttonBlueColor: ImageButton by bind(R.id.blue)
     private val buttonGreenColor: ImageButton by bind(R.id.green)
     private val buttonDeleteCell: ImageButton by bind(R.id.delete)
+    private val buttonInfectionCell : MaterialButton by bind(R.id.infekcia)
+    private val buttonHealCell : MaterialButton by bind(R.id.heal)
     private val squareLenin: SquareLenin by bind(R.id.squareLenin)
 
 
@@ -55,12 +58,15 @@ class PlayTimeActivity :BaseActivity (R.layout.play_time), PlayTimeView {
             color = squareColorGreen
         }
 
-//        buttonDeleteCell.setOnClickListener {
-//            presenter.()
-//        }
-    //        buttonDeleteCell.setOnClickListener {
-//            presenter.()
-//        }
+        buttonDeleteCell.setOnClickListener {
+
+        }
+        buttonInfectionCell.setOnClickListener {
+
+        }
+        buttonHealCell.setOnClickListener {
+
+        }
     }
 
 //    fun touch (x, y) {

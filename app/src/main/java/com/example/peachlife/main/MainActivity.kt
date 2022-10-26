@@ -21,6 +21,7 @@ import com.omegar.mvp.ktx.providePresenter
 
 class MainActivity : BaseActivity (R.layout.activity_main), MainView{
 
+    private val buttonExit: Button by bind(R.id.exit)
     private val buttonStart: Button by bind(R.id.start)
     companion object {
         fun createLauncher() = createActivityLauncher()
@@ -43,6 +44,10 @@ class MainActivity : BaseActivity (R.layout.activity_main), MainView{
 
         buttonStart.setOnClickListener {
             presenter.start()
+        }
+
+        buttonExit.setOnClickListener {
+            presenter.exit()
         }
 
 

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
+import android.view.MotionEvent
 import android.view.View
 
 
@@ -11,6 +12,15 @@ class SquareLenin @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
     private val paint = Paint()
+//    override fun onTouchEvent(event: MotionEvent?): Boolean {
+//        x = event.getX()
+//        y = event.getY()
+//        return super.onTouchEvent(event)
+//    }
+//    fun onTouch(v: View?, event: MotionEvent?): Boolean {
+//
+//        return true
+//    }
     @SuppressLint("DrawAllocation")
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
@@ -31,34 +41,8 @@ class SquareLenin @JvmOverloads constructor(
         paint.color = resources.getColor(R.color.sand)
         paint.pathEffect = CornerPathEffect(15f)
         canvas.drawRect(264f, 104f, 334f, 174f, paint)
-
-        paint.color = resources.getColor(R.color.blue)
-        paint.pathEffect = CornerPathEffect(15f)
-        canvas.drawRect(184f, 104f, 254f, 174f, paint )
-
-        paint.color = resources.getColor(R.color.green)
-        paint.pathEffect = CornerPathEffect(15f)
-        canvas.drawRect(104f, 104f, 174f, 174f, paint )
-
-
-
-        paint.color = resources.getColor(R.color.sand)
-        paint.pathEffect = CornerPathEffect(15f)
-        canvas.drawRect(250f, 160f, 320f, 230f, paint)
-
-        paint.color = resources.getColor(R.color.blue)
-        paint.pathEffect = CornerPathEffect(15f)
-        canvas.drawRect(170f, 160f, 240f, 230f, paint )
-
-        paint.color = resources.getColor(R.color.green)
-        paint.pathEffect = CornerPathEffect(15f)
-        canvas.drawRect(90f, 160f, 160f, 230f, paint )
-
-
-
-
-
     }
+
 
 //    fun add(x: Int,y: Int,color: Int) {
 //        list.add(x, y, color)
